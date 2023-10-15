@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		1ABF076C2ADC6B39008F1D9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF076B2ADC6B39008F1D9F /* AppDelegate.swift */; };
 		1ABF076E2ADC6B39008F1D9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF076D2ADC6B39008F1D9F /* SceneDelegate.swift */; };
-		1ABF07702ADC6B39008F1D9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF076F2ADC6B39008F1D9F /* ViewController.swift */; };
-		1ABF07732ADC6B39008F1D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABF07712ADC6B39008F1D9F /* Main.storyboard */; };
+		1ABF07702ADC6B39008F1D9F /* PicassoProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF076F2ADC6B39008F1D9F /* PicassoProViewController.swift */; };
+		1ABF07732ADC6B39008F1D9F /* PicassoProView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABF07712ADC6B39008F1D9F /* PicassoProView.storyboard */; };
 		1ABF07752ADC6B3B008F1D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABF07742ADC6B3B008F1D9F /* Assets.xcassets */; };
 		1ABF07782ADC6B3B008F1D9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABF07762ADC6B3B008F1D9F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +19,8 @@
 		1ABF07682ADC6B39008F1D9F /* PicassoProUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicassoProUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABF076B2ADC6B39008F1D9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ABF076D2ADC6B39008F1D9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1ABF076F2ADC6B39008F1D9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1ABF07722ADC6B39008F1D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1ABF076F2ADC6B39008F1D9F /* PicassoProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicassoProViewController.swift; sourceTree = "<group>"; };
+		1ABF07722ADC6B39008F1D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PicassoProView.storyboard; sourceTree = "<group>"; };
 		1ABF07742ADC6B3B008F1D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ABF07772ADC6B3B008F1D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ABF07792ADC6B3B008F1D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,8 +58,8 @@
 			children = (
 				1ABF076B2ADC6B39008F1D9F /* AppDelegate.swift */,
 				1ABF076D2ADC6B39008F1D9F /* SceneDelegate.swift */,
-				1ABF076F2ADC6B39008F1D9F /* ViewController.swift */,
-				1ABF07712ADC6B39008F1D9F /* Main.storyboard */,
+				1ABF076F2ADC6B39008F1D9F /* PicassoProViewController.swift */,
+				1ABF07712ADC6B39008F1D9F /* PicassoProView.storyboard */,
 				1ABF07742ADC6B3B008F1D9F /* Assets.xcassets */,
 				1ABF07762ADC6B3B008F1D9F /* LaunchScreen.storyboard */,
 				1ABF07792ADC6B3B008F1D9F /* Info.plist */,
@@ -127,7 +127,7 @@
 			files = (
 				1ABF07782ADC6B3B008F1D9F /* LaunchScreen.storyboard in Resources */,
 				1ABF07752ADC6B3B008F1D9F /* Assets.xcassets in Resources */,
-				1ABF07732ADC6B39008F1D9F /* Main.storyboard in Resources */,
+				1ABF07732ADC6B39008F1D9F /* PicassoProView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ABF07702ADC6B39008F1D9F /* ViewController.swift in Sources */,
+				1ABF07702ADC6B39008F1D9F /* PicassoProViewController.swift in Sources */,
 				1ABF076C2ADC6B39008F1D9F /* AppDelegate.swift in Sources */,
 				1ABF076E2ADC6B39008F1D9F /* SceneDelegate.swift in Sources */,
 			);
@@ -147,12 +147,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1ABF07712ADC6B39008F1D9F /* Main.storyboard */ = {
+		1ABF07712ADC6B39008F1D9F /* PicassoProView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1ABF07722ADC6B39008F1D9F /* Base */,
 			);
-			name = Main.storyboard;
+			name = PicassoProView.storyboard;
 			sourceTree = "<group>";
 		};
 		1ABF07762ADC6B3B008F1D9F /* LaunchScreen.storyboard */ = {
@@ -292,7 +292,7 @@
 				INFOPLIST_FILE = PicassoProUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = PicassoProView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +320,7 @@
 				INFOPLIST_FILE = PicassoProUIKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = PicassoProView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
