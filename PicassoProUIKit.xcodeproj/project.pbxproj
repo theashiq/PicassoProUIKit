@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AB1E5082ADCF09700B3BACB /* PromptInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5052ADCF09600B3BACB /* PromptInput.swift */; };
+		1AB1E5092ADCF09700B3BACB /* StableDiffusionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5062ADCF09600B3BACB /* StableDiffusionError.swift */; };
+		1AB1E50A2ADCF09700B3BACB /* StableDiffusionAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5072ADCF09600B3BACB /* StableDiffusionAPIModel.swift */; };
+		1AB1E50E2ADCF14300B3BACB /* StableDiffusionAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E50C2ADCF14300B3BACB /* StableDiffusionAPIManager.swift */; };
+		1AB1E50F2ADCF14300B3BACB /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E50D2ADCF14300B3BACB /* ImageSaver.swift */; };
+		1AB1E5142ADCF53C00B3BACB /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5132ADCF53C00B3BACB /* UIImageView+Ext.swift */; };
+		1AB1E5162ADCF68B00B3BACB /* AlertStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5152ADCF68B00B3BACB /* AlertStatus.swift */; };
+		1ABF076C2ADC6B39008F1D9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF076B2ADC6B39008F1D9F /* AppDelegate.swift */; };
+		1ABF076E2ADC6B39008F1D9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF076D2ADC6B39008F1D9F /* SceneDelegate.swift */; };
+		1ABF07702ADC6B39008F1D9F /* PicassoProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF076F2ADC6B39008F1D9F /* PicassoProViewController.swift */; };
+		1ABF07732ADC6B39008F1D9F /* PicassoProView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABF07712ADC6B39008F1D9F /* PicassoProView.storyboard */; };
+		1ABF07752ADC6B3B008F1D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABF07742ADC6B3B008F1D9F /* Assets.xcassets */; };
+		1ABF07782ADC6B3B008F1D9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABF07762ADC6B3B008F1D9F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1AB1E5052ADCF09600B3BACB /* PromptInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptInput.swift; sourceTree = "<group>"; };
+		1AB1E5062ADCF09600B3BACB /* StableDiffusionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StableDiffusionError.swift; sourceTree = "<group>"; };
+		1AB1E5072ADCF09600B3BACB /* StableDiffusionAPIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StableDiffusionAPIModel.swift; sourceTree = "<group>"; };
+		1AB1E50C2ADCF14300B3BACB /* StableDiffusionAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StableDiffusionAPIManager.swift; sourceTree = "<group>"; };
+		1AB1E50D2ADCF14300B3BACB /* ImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		1AB1E5132ADCF53C00B3BACB /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		1AB1E5152ADCF68B00B3BACB /* AlertStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStatus.swift; sourceTree = "<group>"; };
+		1ABF07682ADC6B39008F1D9F /* PicassoProUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicassoProUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ABF076B2ADC6B39008F1D9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1ABF076D2ADC6B39008F1D9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1ABF076F2ADC6B39008F1D9F /* PicassoProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicassoProViewController.swift; sourceTree = "<group>"; };
+		1ABF07722ADC6B39008F1D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PicassoProView.storyboard; sourceTree = "<group>"; };
+		1ABF07742ADC6B3B008F1D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1ABF07772ADC6B3B008F1D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1ABF07792ADC6B3B008F1D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1ABF07652ADC6B39008F1D9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AB1E5042ADCF09600B3BACB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1AB1E5052ADCF09600B3BACB /* PromptInput.swift */,
+				1AB1E5062ADCF09600B3BACB /* StableDiffusionError.swift */,
+				1AB1E5072ADCF09600B3BACB /* StableDiffusionAPIModel.swift */,
+				1AB1E5152ADCF68B00B3BACB /* AlertStatus.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1AB1E50B2ADCF14300B3BACB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1AB1E50C2ADCF14300B3BACB /* StableDiffusionAPIManager.swift */,
+				1AB1E50D2ADCF14300B3BACB /* ImageSaver.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1AB1E5102ADCF51200B3BACB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1AB1E5132ADCF53C00B3BACB /* UIImageView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1ABF075F2ADC6B39008F1D9F = {
+			isa = PBXGroup;
+			children = (
+				1ABF076A2ADC6B39008F1D9F /* PicassoProUIKit */,
+				1ABF07692ADC6B39008F1D9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1ABF07692ADC6B39008F1D9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1ABF07682ADC6B39008F1D9F /* PicassoProUIKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1ABF076A2ADC6B39008F1D9F /* PicassoProUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1AB1E5102ADCF51200B3BACB /* Extensions */,
+				1AB1E50B2ADCF14300B3BACB /* Utilities */,
+				1AB1E5042ADCF09600B3BACB /* Models */,
+				1ABF076B2ADC6B39008F1D9F /* AppDelegate.swift */,
+				1ABF076D2ADC6B39008F1D9F /* SceneDelegate.swift */,
+				1ABF076F2ADC6B39008F1D9F /* PicassoProViewController.swift */,
+				1ABF07712ADC6B39008F1D9F /* PicassoProView.storyboard */,
+				1ABF07742ADC6B3B008F1D9F /* Assets.xcassets */,
+				1ABF07762ADC6B3B008F1D9F /* LaunchScreen.storyboard */,
+				1ABF07792ADC6B3B008F1D9F /* Info.plist */,
+			);
+			path = PicassoProUIKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1ABF07672ADC6B39008F1D9F /* PicassoProUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ABF077C2ADC6B3B008F1D9F /* Build configuration list for PBXNativeTarget "PicassoProUIKit" */;
+			buildPhases = (
+				1ABF07642ADC6B39008F1D9F /* Sources */,
+				1ABF07652ADC6B39008F1D9F /* Frameworks */,
+				1ABF07662ADC6B39008F1D9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PicassoProUIKit;
+			productName = PicassoProUIKit;
+			productReference = 1ABF07682ADC6B39008F1D9F /* PicassoProUIKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1ABF07602ADC6B39008F1D9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1ABF07672ADC6B39008F1D9F = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 1ABF07632ADC6B39008F1D9F /* Build configuration list for PBXProject "PicassoProUIKit" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1ABF075F2ADC6B39008F1D9F;
+			productRefGroup = 1ABF07692ADC6B39008F1D9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1ABF07672ADC6B39008F1D9F /* PicassoProUIKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1ABF07662ADC6B39008F1D9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ABF07782ADC6B3B008F1D9F /* LaunchScreen.storyboard in Resources */,
+				1ABF07752ADC6B3B008F1D9F /* Assets.xcassets in Resources */,
+				1ABF07732ADC6B39008F1D9F /* PicassoProView.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1ABF07642ADC6B39008F1D9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB1E5162ADCF68B00B3BACB /* AlertStatus.swift in Sources */,
+				1ABF07702ADC6B39008F1D9F /* PicassoProViewController.swift in Sources */,
+				1AB1E5092ADCF09700B3BACB /* StableDiffusionError.swift in Sources */,
+				1ABF076C2ADC6B39008F1D9F /* AppDelegate.swift in Sources */,
+				1AB1E5082ADCF09700B3BACB /* PromptInput.swift in Sources */,
+				1ABF076E2ADC6B39008F1D9F /* SceneDelegate.swift in Sources */,
+				1AB1E5142ADCF53C00B3BACB /* UIImageView+Ext.swift in Sources */,
+				1AB1E50A2ADCF09700B3BACB /* StableDiffusionAPIModel.swift in Sources */,
+				1AB1E50E2ADCF14300B3BACB /* StableDiffusionAPIManager.swift in Sources */,
+				1AB1E50F2ADCF14300B3BACB /* ImageSaver.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1ABF07712ADC6B39008F1D9F /* PicassoProView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABF07722ADC6B39008F1D9F /* Base */,
+			);
+			name = PicassoProView.storyboard;
+			sourceTree = "<group>";
+		};
+		1ABF07762ADC6B3B008F1D9F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABF07772ADC6B3B008F1D9F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1ABF077A2ADC6B3B008F1D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1ABF077B2ADC6B3B008F1D9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1ABF077D2ADC6B3B008F1D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DPTVNYZ67M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PicassoProUIKit/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need this permission to save your photo to the gallery";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = PicassoProView;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bongo.PicassoProUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1ABF077E2ADC6B3B008F1D9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DPTVNYZ67M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PicassoProUIKit/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need this permission to save your photo to the gallery";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = PicassoProView;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bongo.PicassoProUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1ABF07632ADC6B39008F1D9F /* Build configuration list for PBXProject "PicassoProUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ABF077A2ADC6B3B008F1D9F /* Debug */,
+				1ABF077B2ADC6B3B008F1D9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ABF077C2ADC6B3B008F1D9F /* Build configuration list for PBXNativeTarget "PicassoProUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ABF077D2ADC6B3B008F1D9F /* Debug */,
+				1ABF077E2ADC6B3B008F1D9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1ABF07602ADC6B39008F1D9F /* Project object */;
+}
