@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AB1E5082ADCF09700B3BACB /* PromptInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5052ADCF09600B3BACB /* PromptInput.swift */; };
+		1AB1E5092ADCF09700B3BACB /* StableDiffusionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5062ADCF09600B3BACB /* StableDiffusionError.swift */; };
+		1AB1E50A2ADCF09700B3BACB /* StableDiffusionAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5072ADCF09600B3BACB /* StableDiffusionAPIModel.swift */; };
+		1AB1E50E2ADCF14300B3BACB /* StableDiffusionAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E50C2ADCF14300B3BACB /* StableDiffusionAPIManager.swift */; };
+		1AB1E50F2ADCF14300B3BACB /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E50D2ADCF14300B3BACB /* ImageSaver.swift */; };
+		1AB1E5142ADCF53C00B3BACB /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5132ADCF53C00B3BACB /* UIImageView+Ext.swift */; };
+		1AB1E5162ADCF68B00B3BACB /* AlertStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5152ADCF68B00B3BACB /* AlertStatus.swift */; };
 		1ABF076C2ADC6B39008F1D9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF076B2ADC6B39008F1D9F /* AppDelegate.swift */; };
 		1ABF076E2ADC6B39008F1D9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF076D2ADC6B39008F1D9F /* SceneDelegate.swift */; };
 		1ABF07702ADC6B39008F1D9F /* PicassoProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF076F2ADC6B39008F1D9F /* PicassoProViewController.swift */; };
@@ -16,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AB1E5052ADCF09600B3BACB /* PromptInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptInput.swift; sourceTree = "<group>"; };
+		1AB1E5062ADCF09600B3BACB /* StableDiffusionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StableDiffusionError.swift; sourceTree = "<group>"; };
+		1AB1E5072ADCF09600B3BACB /* StableDiffusionAPIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StableDiffusionAPIModel.swift; sourceTree = "<group>"; };
+		1AB1E50C2ADCF14300B3BACB /* StableDiffusionAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StableDiffusionAPIManager.swift; sourceTree = "<group>"; };
+		1AB1E50D2ADCF14300B3BACB /* ImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		1AB1E5132ADCF53C00B3BACB /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		1AB1E5152ADCF68B00B3BACB /* AlertStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStatus.swift; sourceTree = "<group>"; };
 		1ABF07682ADC6B39008F1D9F /* PicassoProUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicassoProUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABF076B2ADC6B39008F1D9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ABF076D2ADC6B39008F1D9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +51,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AB1E5042ADCF09600B3BACB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1AB1E5052ADCF09600B3BACB /* PromptInput.swift */,
+				1AB1E5062ADCF09600B3BACB /* StableDiffusionError.swift */,
+				1AB1E5072ADCF09600B3BACB /* StableDiffusionAPIModel.swift */,
+				1AB1E5152ADCF68B00B3BACB /* AlertStatus.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1AB1E50B2ADCF14300B3BACB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1AB1E50C2ADCF14300B3BACB /* StableDiffusionAPIManager.swift */,
+				1AB1E50D2ADCF14300B3BACB /* ImageSaver.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1AB1E5102ADCF51200B3BACB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1AB1E5132ADCF53C00B3BACB /* UIImageView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1ABF075F2ADC6B39008F1D9F = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +98,9 @@
 		1ABF076A2ADC6B39008F1D9F /* PicassoProUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				1AB1E5102ADCF51200B3BACB /* Extensions */,
+				1AB1E50B2ADCF14300B3BACB /* Utilities */,
+				1AB1E5042ADCF09600B3BACB /* Models */,
 				1ABF076B2ADC6B39008F1D9F /* AppDelegate.swift */,
 				1ABF076D2ADC6B39008F1D9F /* SceneDelegate.swift */,
 				1ABF076F2ADC6B39008F1D9F /* PicassoProViewController.swift */,
@@ -138,9 +183,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB1E5162ADCF68B00B3BACB /* AlertStatus.swift in Sources */,
 				1ABF07702ADC6B39008F1D9F /* PicassoProViewController.swift in Sources */,
+				1AB1E5092ADCF09700B3BACB /* StableDiffusionError.swift in Sources */,
 				1ABF076C2ADC6B39008F1D9F /* AppDelegate.swift in Sources */,
+				1AB1E5082ADCF09700B3BACB /* PromptInput.swift in Sources */,
 				1ABF076E2ADC6B39008F1D9F /* SceneDelegate.swift in Sources */,
+				1AB1E5142ADCF53C00B3BACB /* UIImageView+Ext.swift in Sources */,
+				1AB1E50A2ADCF09700B3BACB /* StableDiffusionAPIModel.swift in Sources */,
+				1AB1E50E2ADCF14300B3BACB /* StableDiffusionAPIManager.swift in Sources */,
+				1AB1E50F2ADCF14300B3BACB /* ImageSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +342,7 @@
 				DEVELOPMENT_TEAM = DPTVNYZ67M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PicassoProUIKit/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need this permission to save your photo to the gallery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = PicassoProView;
@@ -318,6 +371,7 @@
 				DEVELOPMENT_TEAM = DPTVNYZ67M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PicassoProUIKit/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need this permission to save your photo to the gallery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = PicassoProView;
