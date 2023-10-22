@@ -36,7 +36,7 @@ enum AlertStatus: Equatable{
 }
 
 extension AlertStatus{
-    init(from sdError: StableDiffusionError) {
+    init(from sdError: ImageGenerationError) {
         switch sdError{
         case .apiError(let message):
             self = .success(sdError.rawValue, message)

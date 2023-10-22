@@ -1,13 +1,17 @@
 //
-//  StableDiffusionError.swift
-//  PicassoPro
+//  ImageGenerator.swift
+//  PicassoProUIKit
 //
-//  Created by mac 2019 on 10/2/23.
+//  Created by mac 2019 on 10/23/23.
 //
 
 import Foundation
 
-enum StableDiffusionError: Error, LocalizedError, Equatable{
+protocol ImageGenerator {
+    func getImageUrls(prompt: PromptInput, completed: @escaping (Result<[URL], ImageGenerationError>) -> Void) async
+}
+
+enum ImageGenerationError: Error, LocalizedError, Equatable{
     case apiError(String)
     case networkError(String)
     case unknownError(String = "An  error occurred. Please retry after sometime")
@@ -24,7 +28,7 @@ enum StableDiffusionError: Error, LocalizedError, Equatable{
     }
 }
 
-extension StableDiffusionError: RawRepresentable {
+extension ImageGenerationError: RawRepresentable {
 
     public typealias RawValue = String
 
@@ -43,6 +47,19 @@ extension StableDiffusionError: RawRepresentable {
         case .apiError: return "API Error"
         case .networkError: return "Network Error"
         case .unknownError: return "Unknown Error"
+        }
+    }
+}
+
+
+class DummyImageGenerator: ImageGenerator{
+    
+    private let dummyImageUrl1 = URL(string: "https://i.natgeofe.com/n/49f1c59b-095d-47a6-b72c-92bc6740a37c/tpc18-outdoor-gallery-1693450-12040196_03_square.jpg")!
+    private let dummyImageUrl2 = URL(string: "https://upload.wikimedia.org/wikipedia/en/thumb/9/93/Burj_Khalifa.jpg/1200px-Burj_Khalifa.jpg")!
+    
+    func getImageUrls(prompt: PromptInput, completed: @escaping (Result<[URL], ImageGenerationError>) -> Void) async {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2){
+            completed(.success([self.dummyImageUrl1, self.dummyImageUrl2].shuffled()))
         }
     }
 }

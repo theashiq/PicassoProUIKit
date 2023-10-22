@@ -26,10 +26,24 @@ class PicassoProViewController: UIViewController {
     @IBOutlet weak var viewProgress: UIActivityIndicatorView!
     @IBOutlet weak var labelProgress: UILabel!
     
+    //MARK: - Constructors
+    
+    init(imageGenerator: ImageGenerator) {
+        self.imageGenerator = imageGenerator
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        self.imageGenerator = DummyImageGenerator()
+        super.init(coder: coder)
+    }
+    
     //MARK: - Properties
+    private let imageGenerator: ImageGenerator
+    
     private var prompt: PromptInput =  .empty {
         didSet {
-            if !isGeneratingImage && !prompt.isEmpty {
+            if !isGeneratingImage {
                 alertStatus = .none
                 generateImage()
             }
@@ -38,8 +52,8 @@ class PicassoProViewController: UIViewController {
             }
             
             labelExpression.text = prompt.expression
-            viewEmptyPrompt.isHidden = hideEmptyPromptIndicator
-            viewInputButtonIndicator.isHidden = hideEmptyPromptIndicator
+            viewEmptyPrompt.isHidden = hideIndicators
+            viewInputButtonIndicator.isHidden = hideIndicators
         }
     }
     
@@ -76,14 +90,14 @@ class PicassoProViewController: UIViewController {
             updateProgressLabel(isGeneratingImage ? "Processing" : nil)
         }
     }
-    private var imageUrl: String = ""{
+    private var imageUrl: URL? = nil{
         didSet{
             fetchImage()
         }
     }
     
-    var hideEmptyPromptIndicator: Bool{
-        prompt.isEmpty && !isGeneratingImage && imageUrl.isEmpty
+    var hideIndicators: Bool{
+        !(prompt.isEmpty && !isGeneratingImage && imageUrl == nil)
     }
     
     //MARK: - Methods
@@ -96,27 +110,32 @@ class PicassoProViewController: UIViewController {
         buttonSave.addTarget(self, action: #selector(self.buttonSaveTapped), for: .touchUpInside)
         buttonShare.addTarget(self, action: #selector(self.buttonShareTapped), for: .touchUpInside)
         
+        labelExpression.text = ""
         viewOutput.isHidden = true
-        
         updateProgressLabel(nil)
+        
+        UIView.animate(withDuration: 1.0, delay: 0, options: [.repeat, .autoreverse], animations: {
+            self.viewInputButtonIndicator.center = CGPointMake(self.viewInputButtonIndicator.center.x, self.viewInputButtonIndicator.center.y + 40); // set center
+        }, completion: nil)
     }
     
     private func generateImage(){
+        
+        guard !prompt.isEmpty else { return }
+        
         isGeneratingImage = true
         buttonPromptInput.isEnabled = false
         
         Task{
-            await StableDiffusionAPIManager.shared.getImageUrls(prompt: prompt){ [weak self] result in
+            await imageGenerator.getImageUrls(prompt: prompt){ [weak self] result in
                 DispatchQueue.main.async{
                     self?.isGeneratingImage = false
                     self?.buttonPromptInput.isEnabled = true
                     switch result{
-                    case .success(let apiResponseData):
-                        if apiResponseData.output.count > 0{
-                            self?.imageUrl = apiResponseData.output.first!
-                        }
+                    case .success(let urls):
+                        self?.imageUrl = urls.first
                     case .failure(let error):
-                        self?.imageUrl = ""
+                        self?.imageUrl = nil
                         self?.alertStatus = .init(from: error)
                     }
                 }
@@ -127,8 +146,8 @@ class PicassoProViewController: UIViewController {
     private func fetchImage(){
         updateProgressLabel("Loading")
         
-        if let url = URL(string: imageUrl){
-            imageOutput.load(url: url){ [weak self] result in
+        if let imageUrl {
+            imageOutput.load(url: imageUrl){ [weak self] result in
                 DispatchQueue.main.async{
                     self?.canShareImage = result
                     self?.imageSaveState = result ? .toBeDone : .invalid
@@ -148,9 +167,11 @@ class PicassoProViewController: UIViewController {
         
         if text == nil{
             viewProgress.stopAnimating()
+            imageOutput.layer.opacity = 1
         }
         else{
             viewProgress.startAnimating()
+            imageOutput.layer.opacity = 0.3
         }
     }
     

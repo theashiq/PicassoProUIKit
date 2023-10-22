@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A147DBC2AE5CF1800ABF335 /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A147DBB2AE5CF1800ABF335 /* ImageGenerator.swift */; };
 		1AB1E5082ADCF09700B3BACB /* PromptInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5052ADCF09600B3BACB /* PromptInput.swift */; };
-		1AB1E5092ADCF09700B3BACB /* StableDiffusionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5062ADCF09600B3BACB /* StableDiffusionError.swift */; };
 		1AB1E50A2ADCF09700B3BACB /* StableDiffusionAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5072ADCF09600B3BACB /* StableDiffusionAPIModel.swift */; };
-		1AB1E50E2ADCF14300B3BACB /* StableDiffusionAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E50C2ADCF14300B3BACB /* StableDiffusionAPIManager.swift */; };
+		1AB1E50E2ADCF14300B3BACB /* StableDiffusionImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E50C2ADCF14300B3BACB /* StableDiffusionImageGenerator.swift */; };
 		1AB1E50F2ADCF14300B3BACB /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E50D2ADCF14300B3BACB /* ImageSaver.swift */; };
 		1AB1E5142ADCF53C00B3BACB /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5132ADCF53C00B3BACB /* UIImageView+Ext.swift */; };
 		1AB1E5162ADCF68B00B3BACB /* AlertStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB1E5152ADCF68B00B3BACB /* AlertStatus.swift */; };
@@ -23,10 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A147DBB2AE5CF1800ABF335 /* ImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
 		1AB1E5052ADCF09600B3BACB /* PromptInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptInput.swift; sourceTree = "<group>"; };
-		1AB1E5062ADCF09600B3BACB /* StableDiffusionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StableDiffusionError.swift; sourceTree = "<group>"; };
 		1AB1E5072ADCF09600B3BACB /* StableDiffusionAPIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StableDiffusionAPIModel.swift; sourceTree = "<group>"; };
-		1AB1E50C2ADCF14300B3BACB /* StableDiffusionAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StableDiffusionAPIManager.swift; sourceTree = "<group>"; };
+		1AB1E50C2ADCF14300B3BACB /* StableDiffusionImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StableDiffusionImageGenerator.swift; sourceTree = "<group>"; };
 		1AB1E50D2ADCF14300B3BACB /* ImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		1AB1E5132ADCF53C00B3BACB /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		1AB1E5152ADCF68B00B3BACB /* AlertStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStatus.swift; sourceTree = "<group>"; };
@@ -55,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				1AB1E5052ADCF09600B3BACB /* PromptInput.swift */,
-				1AB1E5062ADCF09600B3BACB /* StableDiffusionError.swift */,
 				1AB1E5072ADCF09600B3BACB /* StableDiffusionAPIModel.swift */,
 				1AB1E5152ADCF68B00B3BACB /* AlertStatus.swift */,
 			);
@@ -65,8 +64,9 @@
 		1AB1E50B2ADCF14300B3BACB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				1AB1E50C2ADCF14300B3BACB /* StableDiffusionAPIManager.swift */,
+				1AB1E50C2ADCF14300B3BACB /* StableDiffusionImageGenerator.swift */,
 				1AB1E50D2ADCF14300B3BACB /* ImageSaver.swift */,
+				1A147DBB2AE5CF1800ABF335 /* ImageGenerator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -185,13 +185,13 @@
 			files = (
 				1AB1E5162ADCF68B00B3BACB /* AlertStatus.swift in Sources */,
 				1ABF07702ADC6B39008F1D9F /* PicassoProViewController.swift in Sources */,
-				1AB1E5092ADCF09700B3BACB /* StableDiffusionError.swift in Sources */,
 				1ABF076C2ADC6B39008F1D9F /* AppDelegate.swift in Sources */,
+				1A147DBC2AE5CF1800ABF335 /* ImageGenerator.swift in Sources */,
 				1AB1E5082ADCF09700B3BACB /* PromptInput.swift in Sources */,
 				1ABF076E2ADC6B39008F1D9F /* SceneDelegate.swift in Sources */,
 				1AB1E5142ADCF53C00B3BACB /* UIImageView+Ext.swift in Sources */,
 				1AB1E50A2ADCF09700B3BACB /* StableDiffusionAPIModel.swift in Sources */,
-				1AB1E50E2ADCF14300B3BACB /* StableDiffusionAPIManager.swift in Sources */,
+				1AB1E50E2ADCF14300B3BACB /* StableDiffusionImageGenerator.swift in Sources */,
 				1AB1E50F2ADCF14300B3BACB /* ImageSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
