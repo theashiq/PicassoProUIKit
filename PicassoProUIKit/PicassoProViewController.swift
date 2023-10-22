@@ -163,6 +163,10 @@ class PicassoProViewController: UIViewController {
     
     private func updateProgressLabel(_ text: String?){
         viewProgressContainer.isHidden = text == nil
+        
+        buttonPromptInput.isEnabled = text == nil
+        buttonPromptInput.alpha = buttonPromptInput.isEnabled ? 1.0 : 0.5;
+        
         labelProgress.text = text
         
         if text == nil{
