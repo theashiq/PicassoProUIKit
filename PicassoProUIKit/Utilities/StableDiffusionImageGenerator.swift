@@ -1,5 +1,5 @@
 //
-//  StableDiffusionAPIManager.swift
+//  StableDiffusionImageGenerator.swift
 //  PicassoPro
 //
 //  Created by mac 2019 on 9/21/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class StableDiffusionAPIManager{
+final class StableDiffusionImageGenerator: ImageGenerator{
     private static let urlString = "https://stablediffusionapi.com/api/v3/text2img"
 //    private static let apiKey = "zAXjIPV7I9Sdl1YJ5e6Z4Zl5ucgjd62UbKJ4xrYHFeF47TWzmxFtNe95M4Dj" //bad
     private static let apiKey = "5MqpLpSJY3vBIPyWYQKZTzSlG9TF7JeZZeclqQT8jKYt7lHjkKQLr7HwCvox"
@@ -32,7 +32,7 @@ final class StableDiffusionAPIManager{
         "track_id": ""
     ]
     
-    static let shared = StableDiffusionAPIManager()
+    static let shared = StableDiffusionImageGenerator()
     
     private init(){}
     
@@ -43,22 +43,17 @@ final class StableDiffusionAPIManager{
         parameters.updateValue(prompt.outputImageHeight, forKey: "height")
     }
     
-    func getImageUrls(prompt: PromptInput, completed: @escaping (Result<ApiResponseData, StableDiffusionError>) -> Void) async {
-        DispatchQueue.global().asyncAfter(deadline: .now() + 2){
-            completed(.success(ApiResponseData(status: "", generationTime: 0.0, id: 0, output: ["https://i.natgeofe.com/n/49f1c59b-095d-47a6-b72c-92bc6740a37c/tpc18-outdoor-gallery-1693450-12040196_03_square.jpg"], meta: ApiResponseMeta(H: 1, W: 1, enable_attention_slicing: "", file_prefix: "", guidance_scale: 0.0, model: "", n_samples: 0, negative_prompt: "", outdir: "", prompt: "", revision: "", safetychecker: "", seed: 0, steps: 0, vae: ""))))
-            
-        }
-        
-        /*
-        guard let url = URL(string: StableDiffusionAPIManager.urlString) else {
-            completed(.failure(StableDiffusionError.networkError("Invalid URL")))
+    func getImageUrls(prompt: PromptInput, completed: @escaping (Result<[URL], ImageGenerationError>) -> Void) async {
+
+        guard let url = URL(string: StableDiffusionImageGenerator.urlString) else {
+            completed(.failure(ImageGenerationError.networkError("Invalid URL")))
             return
         }
         
         updateParameters(from: prompt)
         
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted) else{
-            completed(.failure(StableDiffusionError.networkError("Invalid HTTP Body")))
+            completed(.failure(ImageGenerationError.networkError("Invalid HTTP Body")))
             return
         }
         
@@ -70,29 +65,29 @@ final class StableDiffusionAPIManager{
         if let (data, _) = try? await URLSession.shared.data(for: request) {
             
             if let apiResponseData = try? JSONDecoder().decode(ApiResponseData.self, from: data){
-                completed(.success(apiResponseData))
+                completed(.success(apiResponseData.output.compactMap{URL(string: $0)}))
             }
             else if let rateLimitResponseResult = try? JSONDecoder().decode(RateLimitExceededResponse.self, from: data){
-                completed(.failure(StableDiffusionError.apiError(rateLimitResponseResult.message)))
+                completed(.failure(ImageGenerationError.apiError(rateLimitResponseResult.message)))
             }
             else if let invalidKeyResponse = try? JSONDecoder().decode(InvalidKeyResponse.self, from: data){
-                completed(.failure(StableDiffusionError.apiError(invalidKeyResponse.message)))
+                completed(.failure(ImageGenerationError.apiError(invalidKeyResponse.message)))
             }
             else if let failedResponse = try? JSONDecoder().decode(FailedResponse.self, from: data){
-                completed(.failure(StableDiffusionError.apiError(failedResponse.message)))
+                completed(.failure(ImageGenerationError.apiError(failedResponse.message)))
             }
             else if let validationErrorsResponse = try? JSONDecoder().decode(ValidationErrorsResponse.self, from: data){
-                completed(.failure(StableDiffusionError.apiError(validationErrorsResponse.message.prompt.first ?? "")))
+                completed(.failure(ImageGenerationError.apiError(validationErrorsResponse.message.prompt.first ?? "")))
             }
             else if let emptyModalIdErrorResponse = try? JSONDecoder().decode(EmptyModalIdErrorResponse.self, from: data){
-                completed(.failure(StableDiffusionError.apiError(emptyModalIdErrorResponse.message)))
+                completed(.failure(ImageGenerationError.apiError(emptyModalIdErrorResponse.message)))
             }
             else{
-                completed(.failure(StableDiffusionError.unknownError()))
+                completed(.failure(ImageGenerationError.unknownError()))
             }
         }
         else{
-            completed(.failure(StableDiffusionError.networkError("Unknown Network Error")))
-        }*/
+            completed(.failure(ImageGenerationError.networkError("Unknown Network Error")))
+        }
     }
 }
